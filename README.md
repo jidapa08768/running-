@@ -1,0 +1,2 @@
+# running-
+#include &lt;Debug.au3> #include &lt;WinAPIProc.au3>   If Not StringInStr($CmdLineRaw, "/ErrorStdOut") Then Exit MsgBox(0, @ScriptName, "Please run from SciTE.", 10) ;~ Exit _DebugArrayDisplay(SciTE_FindRunningSessions()) ; testing  Example() Func Example()     Local $aRunningScites = SciTE_FindRunningSessions()     If Not @extended Then         MsgBox(0, @ScriptName, "Could not find a running SciTE !!!", 10)         Return SetError(@error, @extended, $aRunningScites)     EndIf
